@@ -7,7 +7,9 @@ public class ArrayUtils {
     public static void printObjArray(Object[] objArr) {
         // TODO: implement this method
     }
-
+    /**
+     * Выводит в консоль все элементы массива
+     */
     public static void printIntArray(int[] intArr) {
         // TODO: implement this method
     }
