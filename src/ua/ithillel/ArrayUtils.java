@@ -27,6 +27,13 @@ public class ArrayUtils {
         // TODO: implement this method
     }
 
+
+    /**
+     * Calculate sum elements in int array.
+     *
+     * @param intArr the int arr
+     * @return the int
+     */
     public static int calculateSumElementsInIntArray(int[] intArr) {
         return 0;
         // TODO: implement this method
