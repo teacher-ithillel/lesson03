@@ -22,6 +22,11 @@ public class ArrayUtils {
         // TODO: implement this method
     }
 
+    /**
+     * Метод toOneStringInCamelCase принимает массив строк
+     *
+     * @return возвращает строку в CamelCase
+     */
     public static String toOneStringInCamelCase(String[] strArr) {
         return null;
         // TODO: implement this method
