@@ -13,7 +13,7 @@ public class ArrayUtils {
     }
 
     /**
-     * sorts an array with the selection sort algorithm
+     * method sorts an array with the selection sort algorithm
      */
     public static int[] sortIntArray(int[] intArr) {
         return new int[]{1, 2, 3, 4, 5};
