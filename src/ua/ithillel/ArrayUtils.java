@@ -35,6 +35,8 @@ public class ArrayUtils {
     public static int[] mergeAndSortTwoIntArray(int[] ints1, int[] ints2) {
         return new int[0];
         // TODO: implement this method
+        /** Объеденяет два массива и сортирует их */
+
     }
 
     public static int calculateAbsAverageElementValueInIntArray(int[] intArr) {
