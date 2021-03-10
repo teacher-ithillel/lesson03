@@ -136,7 +136,6 @@ public class ArrayUtils {
         int randomArr[] = new int[size];
         for (int i = 0; i < size; i++) randomArr[i] = (int) (min + Math.random() * (max - min) + 1);
         return randomArr;
-
     }
 
 }
