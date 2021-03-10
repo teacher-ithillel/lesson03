@@ -12,6 +12,9 @@ public class ArrayUtils {
         // TODO: implement this method
     }
 
+    /**
+     * sorts an array with the selection sort algorithm
+     */
     public static int[] sortIntArray(int[] intArr) {
         return new int[]{1, 2, 3, 4, 5};
         // TODO: implement this method
