@@ -37,7 +37,7 @@ public class MainDemo {
         ArrayUtils.printIntArray(mergedAndSortedInts);
 //        [1, 2, 3, 4, 5]
 
-        int[] updatedInts = ArrayUtils.removeElementFromIntArray(3, new int[]{1, 3, 5});
+        int[] updatedInts = ArrayUtils.removeElementFromIntArray(3, new int[]{1,3,5});
         ArrayUtils.printIntArray(updatedInts);
 //        [1, 5]
 
