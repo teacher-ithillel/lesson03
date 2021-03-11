@@ -17,6 +17,11 @@ public class ArrayUtils {
         // TODO: implement this method
     }
 
+    /**
+     * This method can search minimal and maximal integer value
+     * from integer array
+     */
+
     public static int[] findMinAndMaxFromIntArray(int[] intArr) {
         return new int[]{-1, 1};
         // TODO: implement this method
