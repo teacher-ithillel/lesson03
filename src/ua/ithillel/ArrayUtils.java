@@ -37,9 +37,17 @@ public class ArrayUtils {
         // TODO: implement this method
     }
 
+    /**
+     * calculate abs average element value in int array
+     * @param intArr - This Array integer
+     * @return calculate element value in int array
+     */
     public static int calculateAbsAverageElementValueInIntArray(int[] intArr) {
-        return 0;
-        // TODO: implement this method
+        int result = 0;
+        for (int value : intArr) {
+            result = result + Math.abs (value) ;
+        }
+       return result / intArr.length;
     }
 
     public static int[] removeElementFromIntArray(int i, int[] ints) {
