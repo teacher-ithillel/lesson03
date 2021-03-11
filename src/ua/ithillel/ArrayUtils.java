@@ -65,14 +65,16 @@ public class ArrayUtils {
 
 
     public static String toOneStringInCamelCase(String[] strArr) {
-        String camelCase = "";
-        for (String word : strArr) {
-            String as = word.toLowerCase();
-            camelCase = camelCase.concat(as.substring(0, 1).toUpperCase()).concat(as.substring(1));
+        StringBuilder camelCase = new StringBuilder();
+        if (strArr[0] != null) {
+            camelCase.append(strArr[0].substring(0, 1).toLowerCase()).append(strArr[0].substring(1));
         }
-        camelCase = camelCase.substring(0, 1).toLowerCase() + camelCase.substring(1);
-
-        return camelCase;
+        for (int i = 1; i < strArr.length; i++) {
+            if (strArr[i] != null) {
+                camelCase.append(strArr[i].substring(0, 1).toUpperCase()).append(strArr[i].substring(1));
+            }
+        }
+        return camelCase.toString();
     }
 
 
@@ -134,7 +136,9 @@ public class ArrayUtils {
 
     public static int[] generateRandomIntArrayWithSizeMinMax(int size, int min, int max) {
         int randomArr[] = new int[size];
-        for (int i = 0; i < size; i++) randomArr[i] = (int) (min + Math.random() * (max - min) + 1);
+        for (int i = 0; i < size; i++) {
+            randomArr[i] = (int) (min + Math.random() * (max - min) + 1);
+        }
         return randomArr;
     }
 
