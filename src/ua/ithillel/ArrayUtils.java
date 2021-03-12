@@ -1,7 +1,5 @@
 package ua.ithillel;
 
-import java.util.Arrays;
-
 public class ArrayUtils {
 
     public static void printIntArray(int[] intArr) {
@@ -63,7 +61,7 @@ public class ArrayUtils {
             if (i > 0) {
                 char ch = strArr[i].charAt(0);
                 String str = strArr[i].substring(1);
-                stb.append(Character.toString(ch).toUpperCase(Locale.ROOT)).append(str);
+                stb.append(Character.toString(ch).toUpperCase()).append(str);
             } else {
                 stb.append(strArr[i]);
             }
@@ -96,17 +94,7 @@ public class ArrayUtils {
         for (int i = 0; i < ints2.length; i++) {
             array[ints1.length + i] = ints2[i];
         }
-
-        for (int i = 0; i < array.length; i++) {
-            int temp = array[i];
-            int j = i - 1;
-            while (j >= 0 && temp < array[j]) {
-                array[j + 1] = array[j];
-                j--;
-            }
-            array[j + 1] = temp;
-        }
-        return array;
+        return sortIntArray(array);
     }
 
     public static int[] removeElementFromIntArray(int i, int[] ints) {
