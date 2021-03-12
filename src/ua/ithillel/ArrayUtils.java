@@ -8,9 +8,9 @@ public class ArrayUtils {
         StringBuilder sb = new StringBuilder();
         sb.append('[');
         for (int i = 0; i < intArr.length; i++) {
-            if(i==(intArr.length-1)){
+            if (i == (intArr.length - 1)) {
                 sb.append(intArr[i]).append(']');
-            }else {
+            } else {
                 sb.append(intArr[i]).append(", ");
             }
         }
@@ -21,9 +21,9 @@ public class ArrayUtils {
         StringBuilder sb = new StringBuilder();
         sb.append('[');
         for (int i = 0; i < objArr.length; i++) {
-            if(i==(objArr.length-1)){
+            if (i == (objArr.length - 1)) {
                 sb.append(objArr[i]).append(']');
-            }else {
+            } else {
                 sb.append(objArr[i]).append(", ");
             }
         }
