@@ -5,26 +5,40 @@ import java.util.Arrays;
 public class ArrayUtils {
 
     public static void printIntArray(int[] intArr) {
-        for (int i : intArr) {
-            System.out.print(i + " ");
+        StringBuilder sb = new StringBuilder();
+        sb.append('[');
+        for (int i = 0; i < intArr.length; i++) {
+            if(i==(intArr.length-1)){
+                sb.append(intArr[i]).append(']');
+            }else {
+                sb.append(intArr[i]).append(", ");
+            }
         }
+        System.out.println(sb.toString());
     }
 
     public static void printObjArray(Object[] objArr) {
-        for (Object obj : objArr) {
-            System.out.print(obj + " ");
+        StringBuilder sb = new StringBuilder();
+        sb.append('[');
+        for (int i = 0; i < objArr.length; i++) {
+            if(i==(objArr.length-1)){
+                sb.append(objArr[i]).append(']');
+            }else {
+                sb.append(objArr[i]).append(", ");
+            }
         }
+        System.out.println(sb.toString());
     }
 
     public static int[] sortIntArray(int[] intArr) {
-        for (int i = intArr.length - 1; i > 0; i--) {
-            for (int j = 0; j < i; j++) {
-                if (intArr[j] > intArr[j + 1]) {
-                    int tmp = intArr[j];
-                    intArr[j] = intArr[j + 1];
-                    intArr[j + 1] = tmp;
-                }
+        for (int i = 0; i < intArr.length; i++) {
+            int temp = intArr[i];
+            int j = i - 1;
+            while (j >= 0 && temp < intArr[j]) {
+                intArr[j + 1] = intArr[j];
+                j--;
             }
+            intArr[j + 1] = temp;
         }
         return intArr;
     }
