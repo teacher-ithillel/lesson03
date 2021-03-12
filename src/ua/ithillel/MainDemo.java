@@ -1,5 +1,3 @@
-package ua.ithillel;
-
 public class MainDemo {
 
     public static void main(String[] args) {

@@ -1,11 +1,8 @@
-package ua.ithillel;
-
 import java.util.Arrays;
 
 public class ArrayUtils {
 
     static void printObjArray(Object[] objArr) {
-        // TODO: implement this method
         StringBuilder sb = new StringBuilder();
         sb.append("[");
         for (Object o : objArr) {
@@ -19,7 +16,6 @@ public class ArrayUtils {
     }
 
     static void printIntArray(int[] intArr) {
-        // TODO: implement this method
         StringBuilder sb = new StringBuilder();
         sb.append("[");
         for (Integer o : intArr) {
@@ -33,7 +29,6 @@ public class ArrayUtils {
     }
 
     public static int[] sortIntArray(int[] intArr) {
-        // TODO: implement this method
         return mergeSort(intArr, 0, intArr.length - 1);
     }
 
@@ -44,7 +39,6 @@ public class ArrayUtils {
      */
 
     public static int[] findMinAndMaxFromIntArray(int[] intArr) {
-        // TODO: implement this method
         int maxValue = 0;
         int minValue = 0;
 
@@ -61,7 +55,6 @@ public class ArrayUtils {
     }
 
     public static String toOneStringInCamelCase(String[] strArr) {
-        // TODO: implement this method
         StringBuilder sb = new StringBuilder();
         sb.append(strArr[0].substring(0, 1).toLowerCase()).append(strArr[0].substring(1));
         for (int i = 1; i < strArr.length; i++) {
@@ -72,7 +65,6 @@ public class ArrayUtils {
     }
 
     public static int calculateSumElementsInIntArray(int[] intArr) {
-        // TODO: implement this method
         int sum = 0;
         for (int i : intArr) {
             sum += i;
@@ -81,7 +73,6 @@ public class ArrayUtils {
     }
 
     public static int[] mergeAndSortTwoIntArray(int[] ints1, int[] ints2) {
-        // TODO: implement this method
         int[] array1and2 = new int[ints1.length + ints2.length];
         System.arraycopy(ints1, 0, array1and2, 0, ints1.length);
         System.arraycopy(ints2, 0, array1and2, ints1.length, ints2.length);
@@ -89,7 +80,6 @@ public class ArrayUtils {
     }
 
     public static int calculateAbsAverageElementValueInIntArray(int[] intArr) {
-        // TODO: implement this method
         int average = 0;
 
         for (int i : intArr) {
@@ -99,11 +89,10 @@ public class ArrayUtils {
                 average += i;
             }
         }
-        return average / intArr.length;
+        return Math.abs(average / intArr.length);
     }
 
     public static int[] removeElementFromIntArray(int i, int[] ints) {
-        // TODO: implement this method
         int[] array = new int[ints.length - 1];
 
         for (int j = 0, k = 0; j < ints.length; j++) {
@@ -115,7 +104,6 @@ public class ArrayUtils {
     }
 
     public static int[] generateRandomIntArrayWithSizeMinMax(int size, int min, int max) {
-        // TODO: implement this method
         int random[] = new int[size];
         for (int i = 0; i < size; i++) {
             random[i] = (int) (min + Math.random() * (max - min) + 1);
