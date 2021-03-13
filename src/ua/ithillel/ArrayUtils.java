@@ -1,56 +1,126 @@
 package ua.ithillel;
 
-import java.util.Arrays;
-
 public class ArrayUtils {
 
-    public static void printObjArray(Object[] objArr) {
-        // TODO: implement this method
+    public static void printIntArray(int[] intArr) {
+        StringBuilder sb = new StringBuilder();
+        sb.append('[');
+        for (int i = 0; i < intArr.length; i++) {
+            if (i == (intArr.length - 1)) {
+                sb.append(intArr[i]).append(']');
+            } else {
+                sb.append(intArr[i]).append(", ");
+            }
+        }
+        System.out.println(sb.toString());
     }
 
-    public static void printIntArray(int[] intArr) {
-        // TODO: implement this method
+    public static void printObjArray(Object[] objArr) {
+        StringBuilder sb = new StringBuilder();
+        sb.append('[');
+        for (int i = 0; i < objArr.length; i++) {
+            if (i == (objArr.length - 1)) {
+                sb.append(objArr[i]).append(']');
+            } else {
+                sb.append(objArr[i]).append(", ");
+            }
+        }
+        System.out.println(sb.toString());
     }
 
     public static int[] sortIntArray(int[] intArr) {
-        return new int[]{1, 2, 3, 4, 5};
-        // TODO: implement this method
+        for (int i = 0; i < intArr.length; i++) {
+            int temp = intArr[i];
+            int j = i - 1;
+            while (j >= 0 && temp < intArr[j]) {
+                intArr[j + 1] = intArr[j];
+                j--;
+            }
+            intArr[j + 1] = temp;
+        }
+        return intArr;
     }
 
+
     public static int[] findMinAndMaxFromIntArray(int[] intArr) {
-        return new int[]{-1, 1};
-        // TODO: implement this method
+        int[] newArr = new int[2];
+        for (int i = 0; i < intArr.length; i++) {
+            if (intArr[i] < newArr[0]) {
+                newArr[0] = intArr[i];
+            }
+            if (intArr[i] > newArr[1]) {
+                newArr[1] = intArr[i];
+            }
+        }
+        return newArr;
     }
 
     public static String toOneStringInCamelCase(String[] strArr) {
-        return null;
-        // TODO: implement this method
+        StringBuilder stb = new StringBuilder();
+        for (int i = 0; i < strArr.length; i++) {
+            if (i > 0) {
+                char ch = strArr[i].charAt(0);
+                String str = strArr[i].substring(1);
+                stb.append(Character.toString(ch).toUpperCase()).append(str);
+            } else {
+                stb.append(strArr[i]);
+            }
+        }
+        return stb.toString();
     }
 
     public static int calculateSumElementsInIntArray(int[] intArr) {
-        return 0;
-        // TODO: implement this method
-    }
-
-    public static int[] mergeAndSortTwoIntArray(int[] ints1, int[] ints2) {
-        return new int[0];
-        // TODO: implement this method
-        /** Объеденяет два массива и сортирует их */
-
+        int sum = 0;
+        for (int i = 0; i < intArr.length; i++) {
+            sum += intArr[i];
+        }
+        return sum;
     }
 
     public static int calculateAbsAverageElementValueInIntArray(int[] intArr) {
-        return 0;
-        // TODO: implement this method
+        int sum = 0;
+        for (int i = 0; i < intArr.length; i++) {
+            sum += Math.abs(intArr[i]);
+        }
+        return sum / intArr.length;
+
+    }
+
+    public static int[] mergeAndSortTwoIntArray(int[] ints1, int[] ints2) {
+        int[] array = new int[ints1.length + ints2.length];
+        for (int i = 0; i < ints1.length; i++) {
+            array[i] = ints1[i];
+        }
+        for (int i = 0; i < ints2.length; i++) {
+            array[ints1.length + i] = ints2[i];
+        }
+        return sortIntArray(array);
     }
 
     public static int[] removeElementFromIntArray(int i, int[] ints) {
-        return new int[0];
-        // TODO: implement this method
+        int[] array = new int[ints.length - 1];
+        for (int j = 0; j < ints.length; j++) {
+            if ((ints[j] != i) && (j != array.length)) {
+                array[j] = ints[j];
+            }
+
+            if ((ints[j] == i) && (j != array.length)) {
+                array[j] = ints[j + 1];
+                j++;
+            }
+
+            if ((ints[j] != i) && (j == array.length)) {
+                array[j - 1] = ints[j];
+            }
+        }
+        return array;
     }
 
     public static int[] generateRandomIntArrayWithSizeMinMax(int size, int min, int max) {
-        return new int[0];
-        // TODO: implement this method
+        int[] array = new int[size];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = min + (int) (Math.random() * (max - min));
+        }
+        return array;
     }
 }

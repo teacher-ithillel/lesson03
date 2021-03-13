@@ -1,11 +1,10 @@
 package ua.ithillel;
 
 public class MainDemo {
-
     public static void main(String[] args) {
 
-        int[] intArr = { 10, 20, 15, 22, 35, -100, 1, 250, 55, -52 };
-        String[] strArr = { "hello", "world", "java", "python", "kotlin" };
+        int[] intArr = {10, 20, 15, 22, 35, -100, 1, 250, 55, -52};
+        String[] strArr = {"hello", "world", "java", "python", "kotlin"};
 
         ArrayUtils.printIntArray(intArr);
 //        [10, 20, 15, 22, 35, -100, 1, 250, 55, -52]
@@ -44,5 +43,6 @@ public class MainDemo {
         int[] generatedInts = ArrayUtils.generateRandomIntArrayWithSizeMinMax(5, 10, 100);
         ArrayUtils.printIntArray(generatedInts);
 //        [11, 33, 45, 99, 70]
+
     }
 }
